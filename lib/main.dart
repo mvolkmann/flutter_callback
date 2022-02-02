@@ -24,8 +24,6 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
-typedef Callback = void Function(int value);
-
 class _HomeState extends State<Home> {
   var sum = 0;
 
@@ -50,8 +48,10 @@ class _HomeState extends State<Home> {
   }
 }
 
+typedef NumbersCallback = void Function(int value);
+
 class Numbers extends StatefulWidget {
-  final Callback callback;
+  final NumbersCallback callback;
 
   Numbers({required this.callback, Key? key}) : super(key: key);
 
